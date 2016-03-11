@@ -48,21 +48,22 @@ state=regionArray_array.state;
 //alert(region+'regionArray_array');
 //alert(user_id+'user_id');
 
-for(a=0;a<gcm_reg_id_array.length;a++){
+//user table code hide start
+/*for(a=0;a<gcm_reg_id_array.length;a++){
   gcm_id = gcm_reg_id_array[a];
   gg = gcm_id.user_id;
  gcm_regidexi = gcm_id.gcm_regid;
   if(user_id == gg ){
-  //alert(gcm_id.username+'aaa ganesan.k');
+ 
  gcm_idpass = gcm_reg_id_array[a];
  gcm_idpass = gcm_idpass.user_id;
-  //alert(gcm_regidexi);
-}
-// alert(new_count.new_verification_count+'new_verification_count');
-//$("#new_veri_count").html(gcm_id.username);
+ 
 }
 
-//alert(user_id);
+}*/
+////user table code hide end
+
+
 
 
 //alert(region+'region');
@@ -145,8 +146,8 @@ $(document).off('click', '#dashlogout').on('click', '#dashlogout', function() {
 //alert(E_Mail);
 //alert(username);
 //alert(user_id);
-var gcm_idpass=gcm_idpass;
-var gcm_regidexi=gcm_regidexi;
+var user_id=gcm_idpass;
+
 //alert(user_id);
 //alert(gcm_idpass);
 //alert(gcm_idpass);
@@ -186,14 +187,14 @@ var app = {
         console.log("registration event");
         var gcm_regid = data.registrationId;
         //alert(gcm_regid+'dashboard js');
-if(gcm_regidexi != gcm_regid ){
+
 
 	//alert(gcm_regid+'gcm_regid');
 	//alert(E_Mail+'E_Mail');
 	//alert(username+'username');
 	//alert(region+'region');
 		//alert(user_id+'user_id');
- $.ajax({url: 'http://fourthforce.in/verifynew/slim_four_rips/gcm_id.php?gcm_regid='+gcm_regid+"&E_Mail="+E_Mail+"&username="+username+"&region="+region+"&user_id="+user_id,
+ $.ajax({url: 'http://fourthforce.in/verifynew/slim_four_rips/gcm_id_user.php?gcm_regid='+gcm_regid+"&E_Mail="+E_Mail+"&username="+username+"&region="+region+"&user_id="+user_id,
   data:$('#new').serialize(),
   type: 'post',                   
   async: 'true',
@@ -227,7 +228,7 @@ console.log(error);
 alert('Network error has occurred please try again!');
 }
 }); 
-}
+
     });
 
     push.on('notification', function(data) {
