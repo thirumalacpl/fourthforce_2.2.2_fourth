@@ -61,6 +61,21 @@ state=regionArray_array.state;
 }
 
 }*/
+
+for(a=0;a<gcm_reg_id_array.length;a++){
+  gcm_id = gcm_reg_id_array[a];
+  gg = gcm_id.User_Id;
+ 
+  if(user_id == gg ){
+ //alert(user_id+'user_id'+gg+'gg');
+ gcm_idpass = gcm_reg_id_array[a];
+ gcm_idpass = gcm_idpass.User_Id;
+
+ // alert(gcm_idpass+'user_id thiru');
+
+}
+}
+
 ////user table code hide end
 
 
@@ -186,7 +201,7 @@ var app = {
     push.on('registration', function(data) {
         console.log("registration event");
         var gcm_regid = data.registrationId;
-        //alert(gcm_regid+'dashboard js');
+        alert(gcm_regid+'dashboard js');
 
 
 	//alert(gcm_regid+'gcm_regid');
