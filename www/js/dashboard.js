@@ -161,8 +161,8 @@ $(document).off('click', '#dashlogout').on('click', '#dashlogout', function() {
 //alert(E_Mail);
 //alert(username);
 //alert(user_id);
+var gcm_idpass=gcm_idpass;
 var user_id=gcm_idpass;
-
 //alert(user_id);
 //alert(gcm_idpass);
 //alert(gcm_idpass);
